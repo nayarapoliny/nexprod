@@ -1,0 +1,29 @@
+# Backend (Java/Maven/Gradle)
+/factory-backend/target/
+/factory-backend/.mvn/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Frontend (Node.js/Vite)
+/factory-frontend/node_modules/
+/factory-frontend/dist/
+/factory-frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Arquivos de SO
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+:root {
+  /* Paleta Nexprod (Brand Colors) */
+  --nexprod-azul-profundo: #1B263B;
+  --nexprod-verde-sucesso: #2D6A4F;
+  --nexprod-dourado-ambar: #FFB703;
+  --nexprod-azul-light: #8ECAE6;
+  --nexprod-branco-gelo: #F8F9FA;
+}
+
+/* Estilos Globais */
+body {
+  background-color: var(--nexprod-branco-gelo);
+  color: var(--nexprod-azul-profundo); /* Textos principais */
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Classes utilitárias globais baseadas na marca */
+.btn-nex-primary { @apply bg-nex-success text-white px-4 py-2 rounded-md hover:brightness-110 transition-all; }
+.card-nex { @apply bg-white p-6 rounded-lg shadow-sm border border-nex-light; }
+.input-nex { @apply border border-gray-300 rounded px-3 py-2 focus:border-nex-light focus:ring-1 focus:ring-nex-light outline-none; }

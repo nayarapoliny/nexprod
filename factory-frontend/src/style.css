@@ -1,0 +1,170 @@
+/* === Nexprod Global Stylesheet === */
+
+:root {
+  /* Brand Colors */
+  --c-deep-blue: #1B263B;
+  --c-success-green: #2D6A4F;
+  --c-highlight-amber: #FFB703;
+  --c-light-blue: #8ECAE6;
+  --c-ice-white: #F8F9FA;
+
+  /* Neutrals & Greys */
+  --c-text: #1B263B;
+  --c-background: #F8F9FA;
+  --c-border: #dee2e6;
+  --c-table-header: #e9ecef;
+  
+  /* Feedback Colors */
+  --c-danger: #d9534f; /* A conventional red for delete actions */
+  --c-info: #5bc0de;   /* A conventional info blue */
+  --c-white: #ffffff;
+
+  /* Base Typography */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--c-background);
+  color: var(--c-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+/* Sidebar / Main Layout (Anticipating future layout) */
+/* For now, we'll just style the main container */
+.page-container {
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: var(--c-deep-blue);
+  line-height: 1.2;
+}
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; margin-bottom: 1.5rem; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: var(--c-white);
+}
+
+.btn-primary {
+  background-color: var(--c-success-green);
+  border-color: var(--c-success-green);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--c-info);
+  border-color: var(--c-info);
+}
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background-color: var(--c-danger);
+  border-color: var(--c-danger);
+}
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: var(--c-white);
+}
+.data-table th, .data-table td {
+  border: 1px solid var(--c-border);
+  padding: 0.9rem;
+  text-align: left;
+}
+.data-table th {
+  background-color: var(--c-table-header);
+  font-weight: 600;
+}
+.data-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Forms */
+.form-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background-color: var(--c-white);
+  max-width: 600px;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  box-sizing: border-box; /* Important for width: 100% */
+}
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+/* Utility Classes */
+.loading, .error-feedback {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+.error-feedback {
+  color: var(--c-danger);
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  border-radius: 4px;
+}
+.highlight-amber {
+  color: var(--c-highlight-amber);
+  font-weight: bold;
+}
